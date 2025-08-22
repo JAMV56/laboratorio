@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tu Nombre">
+    <meta name="description" content="Sitio web de ejemplo para práctica supervisada, incluye misión, visión, productos y registro.">
+    <meta name="keywords" content="HTML, CSS, Computación, Registro, Productos, Emprendimiento">
+
+    <title>makeupssAle</title>
+
+    <style>
+        body {
+            background: url(fondo 4.jpeg) no-repeat center/cover;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .producto {
+            border: 1px solid #ccc;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        form {
+            background: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        form input[type="submit"] {
+            background: #003366;
+            color: white;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background: #0055a5;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Emprendimiento</h1>
+        <nav>
+            <a href="#vision">Visión y Misión</a>
+            <a href="#productos">Productos</a>
+            <a href="#registro">Registro</a>
+        </nav>
+    </header>
+    <section id="vision" class="contenedor">
+        <h2>Visión</h2>
+        <p>obtiene productos de buena calidad y accesible y adaptablea tu piel</p>
+        
+        <h2>Misión</h2>
+        <p>te ofercemos una pagina manejable, donde puedes hacer tu pedido incluso llenar tus datos</p>
+    </section>
+    <section id="productos" class="contenedor">
+        <h2>Nuestros Productos</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="img/descarga 2 .jpg">
+                <p><strong>Q200.00</strong></p>
+            </div>
+            <div class="producto">
+                <img src="img/descarga 1.jpg">
+                <p><strong>Q100.00</strong></p>
+            </div>
+            <div class="producto">
+                <img src="img/images 4.jpg">
+                <p><strong>Q350.00</strong></p>
+            </div>
+    
+            </div>
+            <div class="producto">
+                <img src="img/images88.jpg">
+                <p><strong>Q50.00</strong></p>
+            </div>
+        </div>
+        <div class="producto">
+                <img src="img/images9.jpg">
+                <p><strong>Q150.00</strong></p>
+            </div>
+            </div>
+    </section>
+    <section id="registro" class="contenedor">
+        <h2>Formulario de Registro</h2>
+        <form action="https://formsubmit.co/janetalejandra151@gmail.com" method="POST">
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Ingresa tu dirección">
+
+            <label>Sexo:</label><br>
+            <input type="radio" id="sexo_m" name="sexo" value="Masculino"> <label for="sexo_m">Masculino</label>
+            <input type="radio" id="sexo_f" name="sexo" value="Femenino"> <label for="sexo_f">Femenino</label>
+            <input type="radio" id="sexo_o" name="sexo" value="Otro"> <label for="sexo_o">Otro</label>
+            <br><br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="1" max="100" placeholder="Ejemplo: 20">
+
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+
+            <label for="otros">Otros:</label>
+            <textarea id="otros" name="otros" rows="3" placeholder="Comentarios adicionales..."></textarea>
+            <input type="hidden" name="_next" value="gracias.html">
+            <input type="hidden" name="_subject" value="Nuevo registro - Mi Emprendimiento">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse" value="¡Gracias por registrarte! Hemos recibido tu información.">
+
+            <input type="submit" value="Registrar">
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Mi pagina | sientete comodo en mi emprendimiento</p>
+    </footer>
+
+</body>
+</html>
